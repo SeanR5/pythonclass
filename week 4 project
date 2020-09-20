@@ -11,6 +11,15 @@ def message():
     print("A message") 
 message()
 
+problem(2)
+def message():
+  x=int(input('enter number of times to print'))
+  count=0
+  while (count < x ):     
+    count = count+1
+    print("A message") 
+message()
+
 problem(3)
 def square(num):
     return num * num
@@ -19,4 +28,11 @@ sqr = square(number)
 print("The answer is {0}".format(sqr))
 
 problem(4)
-
+def bigger10():
+  x=10
+  y=int(input("enter number"))
+  if x>y:
+    print (x)
+  else:
+    print (y)
+bigger10()
