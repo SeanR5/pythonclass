@@ -36,3 +36,13 @@ def bigger10():
   else:
     print (y)
 bigger10()
+
+problem(5)
+def bigger():
+  x=int(input("enter number"))
+  y=int(input("enter number"))
+  if x>y:
+    print (x)
+  else:
+    print (y)
+bigger()
