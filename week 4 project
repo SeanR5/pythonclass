@@ -21,11 +21,10 @@ def message():
 message()
 
 problem(3)
-def square(num):
-    return num * num
-number = float(input("Number to square"))
-sqr = square(number)
-print("The answer is {0}".format(sqr))
+def square():
+    x=int(input("enter number to square"))
+    print (x*x)
+square()
 
 problem(4)
 def bigger10():
