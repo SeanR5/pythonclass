@@ -1,0 +1,13 @@
+(0)
+x="hello"
+y="world"
+print (x,y)
+
+(1)
+  x=(input("food:"))
+  if x == ("stop"):
+    print("end of list")
+  else:
+    print (x)
+
+(2)
