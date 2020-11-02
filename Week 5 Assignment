@@ -1,0 +1,73 @@
+def what_day_of_the_week():
+    month = input('Please enter a month:')
+    day = int(input('Please input a day of the month:'))
+    if month == 'January':
+        month = 0
+    elif month == 'February':
+        month = 31
+    elif month == 'March':
+        month = 60
+    elif month == 'April':
+        month = 91
+    elif month == 'May':
+        month = 121
+    elif month == 'June':
+        month = 152
+    elif month == 'July':
+        month = 182
+    elif month == 'August':
+        month = 213
+    elif month == 'September':
+        month = 244
+    elif month == 'October':
+        month = 274
+    elif month == 'November':
+        month = 305
+    elif month == 'December':
+        month = 335
+    x = month + day
+    if 60 > x > 31:
+        x -= 28
+    elif 91 > x > 60:
+        x -= 56
+    elif 121 > x > 91:
+        x -= 91
+    elif 152 > x > 121:
+        x -= 119
+    elif 182 > x > 152:
+        x -= 147
+    elif 213 > x > 182:
+        x -= 182
+    elif 244 > x > 213:
+        x -= 210
+    elif 274 > x > 244:
+        x -= 238
+    elif 305 > x > 274:
+        x -= 273
+    elif 335 > x > 305:
+        x -= 301
+    elif 366 > x > 335:
+        x -= 329
+    if 14 > x > 7:
+        x -= 7
+    elif 21 > x > 14:
+        x -= 14
+    elif 28 > x >21:
+        x -= 21
+    elif 31 > x > 28:
+        x -= 28
+    if x == 1:
+        print('That day is a Wednesday')
+    elif x == 2:
+        print('That day is a Thursday')
+    elif x == 3:
+        print('That day is a Friday')
+    elif x == 4:
+        print('That day is a Saturday')
+    elif x == 5:
+        print('That day is a Sunday')
+    elif x == 6:
+        print('That day is a Monday')
+    elif x == 7:
+        print('That day is a Tuesday')
+what_day_of_the_week()
