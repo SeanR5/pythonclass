@@ -1,13 +1,10 @@
 (0)
-x="hello"
-y="world"
-print (x,y)
-
+hw = ['hello', 'world']
+print(hw)
 (1)
-  x=(input("food:"))
-  if x == ("stop"):
-    print("end of list")
-  else:
-    print (x)
-
-(2)
+foodlist = []
+foodenter = ''
+while foodenter != ('stop'):
+  foodenter = input('Enter food: ')
+  foodlist.append(foodenter)
+print (foodlist)
