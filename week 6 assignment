@@ -1,6 +1,7 @@
 (0)
 hw = ['hello', 'world']
 print(hw)
+
 (1)
 foodlist = []
 foodenter = ''
@@ -8,3 +9,16 @@ while foodenter != ('stop'):
   foodenter = input('Enter food: ')
   foodlist.append(foodenter)
 print (foodlist)
+
+(2)
+foodlist = []
+foodenter = ''
+while foodenter != ('stop'):
+  foodenter = input('Enter food: ')
+  foodlist.append(foodenter)
+print (foodlist)
+foodenter = input('Enter food to remove:')
+foodlist.remove(foodenter)
+print(foodlist)
+
+(3)
