@@ -22,3 +22,11 @@ foodlist.remove(foodenter)
 print(foodlist)
 
 (3)
+foodlist = []
+foodenter = ''
+while foodenter != ('stop'):
+  foodenter = input('Enter food: ')
+  foodlist.append(foodenter)
+  if foodenter == 'olive':
+    foodlist.remove('olive')
+print (foodlist)
