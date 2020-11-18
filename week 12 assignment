@@ -23,3 +23,30 @@ state_data = pandas.read_csv(file_name)
 state_data["Pop Density"] = state_data["Pop"] / state_data["Area"]
 
 state_data.head()
+
+(4)
+import pandas
+
+file_name = "https://raw.githubusercontent.com/mlepinski/Python-Worksheets/master/states.csv"
+state_data = pandas.read_csv(file_name)
+
+state_data["Pop Density"] = state_data["Pop"] / state_data["Area"]
+biggest_pop = 0
+biggest_name = " "
+popdense = state_data["Pop Density"] = state_data["Pop"] / state_data["Area"]
+
+for (row_num, row)  in state_data.iterrows():
+  if row["Pop Density"] > biggest_pop:
+    biggest_pop = row["Pop Density"]
+    biggest_name = row["Name"]
+
+print(biggest_name, biggest_pop)
+
+for (row_num, row)  in state_data.iterrows():
+  if row["Pop Density"] < biggest_pop:
+    biggest_pop = row["Pop Density"]
+    biggest_name = row["Name"]
+
+print(biggest_name, biggest_pop)
+
+print (popdense.median())
