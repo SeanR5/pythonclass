@@ -1,0 +1,73 @@
+from graphics import*
+import random, time, math
+
+def bounceborders(blueball, dx, dy, xMin, yMin, xMax, yMax):
+    for i in range (700):
+        blueball.move(dx, dy)
+        center = blueball.getCenter()
+        x = center.getX()
+        y = center.getY()
+        if x < xMin:
+            dx = -dx
+        elif x > xMax:
+            dx = -dx
+        if y > yMax:
+            dy = -dy
+        elif y < yMin:
+            dy = -dy
+        time.sleep(0.05)
+
+def bouncebordersred(redball, dx, dy, xMinr, yMinr, xMaxr, yMaxr):
+    for i in range (700):
+        redball.move(dx, dy)
+        center = redball.getCenter()
+        x = center.getX()
+        y = center.getY()
+        if x < xMinr:
+            dx = -dx
+        elif x > xMaxr:
+            dx = -dx
+        if y > yMaxr:
+            dy = -dy
+        elif y < yMinr:
+            dy = -dy
+        time.sleep(0.05)
+
+
+def bluecirc(center, radius, win):
+    bluec = Circle(center, radius)
+    bluec.setFill("blue")
+    bluec.draw(win)
+    return bluec
+  
+def redcirc(center, radius, win):
+    redc = Circle(center, radius)
+    redc.setFill("red")
+    redc.draw(win)
+    return redc
+    
+def randomizer(xMin, yMin, xMax, yMax):
+    x = random.randrange(xMin, xMax + 1)
+    y = random.randrange(yMin, yMax + 1)
+    return Point(x, y)
+
+def redrandomizer(xMinr, yMinr, xMaxr, yMaxr):
+    x = random.randrange(xMinr, xMaxr + 1)
+    y = random.randrange(yMinr, yMaxr + 1)
+    return Point(x, y)
+
+def ballanimate(dx, dy):
+    width = 400
+    height = 300
+    window = GraphWin('ball animation', width, height)
+    radius = 25
+    xMin = radius
+    yMin = radius
+    xMax = width-radius
+    yMax = height-radius
+    center = randomizer(xMin, yMin, xMax, yMax)
+    ball = bluecirc(center, radius, window)
+    rball = redcirc(center, radius, window)
+    bounceborders(ball, dx, dy, xMin, yMin, xMax, yMax)
+    bouncebordersred(rball, dx, dy, xMin, yMin, xMax, yMax)
+ballanimate(5, 5)
